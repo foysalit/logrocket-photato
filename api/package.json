@@ -1,0 +1,47 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Server api for photato",
+  "main": "dist",
+  "author": "Foysal Ahamed",
+  "license": "ISC",
+  "entry": "src/index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon src/index.js --exec babel-node",
+    "start": "node dist",
+    "build": "./node_modules/.bin/babel src --out-dir dist --copy-files",
+    "prestart": "npm run -s build"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 1
+    }
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.13.3",
+    "multer": "^1.4.2",
+    "mysql2": "^1.6.1",
+    "sequelize": "^5.18.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/node": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "eslint": "^3.1.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "nodemon": "^1.9.2"
+  }
+}
