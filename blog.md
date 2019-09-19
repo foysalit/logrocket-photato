@@ -2,13 +2,13 @@ React.js is now one of the most battle-tested and matured frontend frameworks in
 
 Table Of Contents
 =================
-1. Is this post for me?
-2. Laying the ground work
-3. Photo gallery with [chakra UI](https://chakra-ui.com/) and [React](https://reactjs.org/)
-5. Server API to store photo and info in database with [express](https://expressjs.com/) and [sequelize](https://sequelize.org/)
-6. Connect gallery with server api
-7. UX tidbits
-8. Closing remarks
+1. [Is this post for me?](#is-this-post-for-me)
+2. [Laying the ground work](laying-the-ground-work)
+3. [Photo gallery with chakra UI and React](#photo-gallery-with-chakra-UI-and-React)
+5. [Server API to store photo and info in database with express and sequelize](#server-api)
+6. [Connect gallery with server api](#connect-gallery-with-server-api)
+7. [UX tidbits](#ux-tidbits)
+8. [Closing remarks](#closing-remarks)
 
 Before we dive in, for the impatients like me, here's the entire codebase [on github](https://github.com/foysalit/logrocket-photato). Feel free to clone it and take it for a spin.
 
@@ -137,7 +137,7 @@ Now copy-paste the following code into the `package.json` file:
 }
 ```
 
-Notice that we have quite a few dev dependencies and they are needed to enable writing our app in using latest es6 syntax transpiled through babel. Babel is a magnificent tool and full of wonderful features but to use it, you need to know almost nothing about it. In our case, we just need to create a `.babelrc` file alongside the `package.json` file and put the following config in it:
+Notice that we have quite a few ***dev dependencies*** and they are needed to enable writing our app in using latest es6 syntax transpiled through babel. Babel is a magnificent tool and full of wonderful features but to use it, you need to know almost nothing about it. In our case, we just need to create a `.babelrc` file alongside the `package.json` file and put the following config in it:
 
 ```json
 {
@@ -155,7 +155,7 @@ Notice that we have quite a few dev dependencies and they are needed to enable w
 }
 ```
 
-That's all the setup we need for our server app and but before we move on, let's install all the packages by running `npm install` command in the root of the api folder. This command will generate a `node_modules/` folder and a `package.lock.json` file.
+There's also a few dependencies like [express](https://expressjs.com/) and [sequelize](https://sequelize.org/)] and we will see their usage later. That's all the setup we need for our server app and but before we move on, let's install all the packages by running `npm install` command in the root of the api folder. This command will generate a `node_modules/` folder and a `package.lock.json` file.
 
 
 Photo gallery with chakra UI and React
@@ -762,7 +762,8 @@ This completes one communication channel between our frontend and backend apps. 
 4. See a new POST request being sent to http://localhost:3001/photos and a json response coming back.
 
 Here's how mine looks:
-![First attempt to upload file](first-attempt-to-upload-file)
+
+![First attempt to upload file](screenshots/first-attempt-to-upload-file.png)
 
 To verify that the upload worked, go into the `api/uploads` directory and you should see a file there. Try uploading more photos and see if they keep showing up in that folder.
 
